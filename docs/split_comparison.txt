@@ -1,0 +1,9 @@
+70/15/15 vs 80/10/10 KAN ensemble — held-out test set (n=5)
+Test sims: ['DCLG_Test_1_PE_PIR_HRR2100_M010_0_1', 'DCLG_Test_3_FRPE_PIR_HRR1667_M010_0_1', 'DCLG_Test_3_FRPE_PIR_HRR2100_M010_0_1', 'DCLG_Test_5_LCM_PIR_HRR2000_M009_0_1', 'DCLG_Test_5_LCM_PIR_HRR2333_M010_0_1']
+
+Overall R2:        old=0.9060  new=0.8406  delta=-0.0654
+Overall RMSE C:    old=68.90  new=89.73  delta=+20.83
+MAPE (T>100) %:    old=13.22  new=16.43  delta=+3.21
+Avg sensor R2:     old=0.8575  new=0.7583
+Sensors R2>0.9:    old=11  new=7
+Sensors R2>0.8:    old=19  new=12

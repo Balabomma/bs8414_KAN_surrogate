@@ -1,0 +1,118 @@
+======================================================================
+  BS8414 KAN-Attention-LSTM Surrogate — Training v2 (best-of-N)
+======================================================================
+Device: cuda
+  Scanning for simulations...
+  [training_data/] 49 folders, 49 with DEVC CSV
+  Total: 49 discovered, 49 with output data
+
+  Summary:
+    Complete:   49 simulations
+    Partial:    0 simulations (padded + masked)
+    Total:      49 usable
+    No output:  0
+    Too short:  0 (< 30 timesteps)
+    Bad params: 0
+    Input:  (49, 16)
+    Output: (49, 181, 24)
+
+Data splits (deterministic, hash-based):
+  Train: 32 samples
+    - Test_1_PE_PIR HRR1333 M008  [DCLG_Test_1_PE_PIR_HRR1333_M008_0_1]
+    - Test_1_PE_PIR HRR1667 M008  [DCLG_Test_1_PE_PIR_HRR1667_M008_0_1]
+    - Test_1_PE_PIR HRR1667 M009  [DCLG_Test_1_PE_PIR_HRR1667_M009_0_1]
+    - Test_1_PE_PIR HRR1667 M010  [DCLG_Test_1_PE_PIR_HRR1667_M010_0_1]
+    - Test_1_PE_PIR HRR2000 M008  [DCLG_Test_1_PE_PIR_HRR2000_M008_0_1]
+    - Test_1_PE_PIR HRR2000 M009  [DCLG_Test_1_PE_PIR_HRR2000_M009_0_1]
+    - Test_1_PE_PIR HRR2000 M010  [DCLG_Test_1_PE_PIR_HRR2000_M010_0_1]
+    - Test_1_PE_PIR HRR2100 M009  [DCLG_Test_1_PE_PIR_HRR2100_M009_0_1]
+    - Test_1_PE_PIR HRR2333 M008  [DCLG_Test_1_new_version02_0_08]
+    - Test_1_PE_PIR HRR2333 M010  [DCLG_Test_1_new_version02_0_1]
+    - Test_3_FRPE_PIR HRR2333 M008  [DCLG_Test_3_FRPE_PIR_0_08]
+    - Test_3_FRPE_PIR HRR2333 M009  [DCLG_Test_3_FRPE_PIR_0_09]
+    - Test_3_FRPE_PIR HRR2333 M010  [DCLG_Test_3_FRPE_PIR_0_1]
+    - Test_3_FRPE_PIR HRR1333 M009  [DCLG_Test_3_FRPE_PIR_HRR1333_M009_0_1]
+    - Test_3_FRPE_PIR HRR2000 M010  [DCLG_Test_3_FRPE_PIR_HRR2000_M010_0_1]
+    - Test_3_FRPE_PIR HRR2100 M009  [DCLG_Test_3_FRPE_PIR_HRR2100_M009_0_1]
+    - Test_5_LCM_PIR HRR2333 M009  [DCLG_Test_5_LCM_PIR_0_09]
+    - Test_5_LCM_PIR HRR1333 M009  [DCLG_Test_5_LCM_PIR_HRR1333_M009_0_1]
+    - Test_5_LCM_PIR HRR1333 M010  [DCLG_Test_5_LCM_PIR_HRR1333_M010_0_1]
+    - Test_5_LCM_PIR HRR1667 M010  [DCLG_Test_5_LCM_PIR_HRR1667_M010_0_1]
+    - Test_5_LCM_PIR HRR2100 M009  [DCLG_Test_5_LCM_PIR_HRR2100_M009_0_1]
+    - Test_5_LCM_PIR HRR2100 M010  [DCLG_Test_5_LCM_PIR_HRR2100_M010_0_1]
+    - Test_7_FRPE_Phenolic HRR2333 M008  [DCLG_Test_7_FRPE_Phenolic_0_08]
+    - Test_7_FRPE_Phenolic HRR2333 M009  [DCLG_Test_7_FRPE_Phenolic_0_09]
+    - Test_7_FRPE_Phenolic HRR2333 M010  [DCLG_Test_7_FRPE_Phenolic_0_1]
+    - Test_7_FRPE_Phenolic HRR1333 M009  [DCLG_Test_7_FRPE_Phenolic_HRR1333_M009_0_1]
+    - Test_7_FRPE_Phenolic HRR1333 M010  [DCLG_Test_7_FRPE_Phenolic_HRR1333_M010_0_1]
+    - Test_7_FRPE_Phenolic HRR1667 M009  [DCLG_Test_7_FRPE_Phenolic_HRR1667_M009_0_1]
+    - Test_7_FRPE_Phenolic HRR1667 M010  [DCLG_Test_7_FRPE_Phenolic_HRR1667_M010_0_1]
+    - Test_7_FRPE_Phenolic HRR2000 M009  [DCLG_Test_7_FRPE_Phenolic_HRR2000_M009_0_1]
+    - Test_7_FRPE_Phenolic HRR2100 M010  [DCLG_Test_7_FRPE_Phenolic_HRR2100_M010_0_1]
+    - Test_7_FRPE_Phenolic HRR2333 M010  [DCLG_Test_7_FRPE_Phenolic_HRR2333_M010_0_1]
+  Valid: 9 samples
+    - Test_1_PE_PIR HRR1333 M010  [DCLG_Test_1_PE_PIR_HRR1333_M010_0_1]
+    - Test_1_PE_PIR HRR2333 M009  [DCLG_Test_1_new_version02_0_09]
+    - Test_3_FRPE_PIR HRR1333 M010  [DCLG_Test_3_FRPE_PIR_HRR1333_M010_0_1]
+    - Test_3_FRPE_PIR HRR1667 M009  [DCLG_Test_3_FRPE_PIR_HRR1667_M009_0_1]
+    - Test_5_LCM_PIR HRR2333 M008  [DCLG_Test_5_LCM_PIR_08]
+    - Test_5_LCM_PIR HRR1667 M009  [DCLG_Test_5_LCM_PIR_HRR1667_M009_0_1]
+    - Test_5_LCM_PIR HRR2000 M010  [DCLG_Test_5_LCM_PIR_HRR2000_M010_0_1]
+    - Test_7_FRPE_Phenolic HRR2000 M010  [DCLG_Test_7_FRPE_Phenolic_HRR2000_M010_0_1]
+    - Test_7_FRPE_Phenolic HRR2100 M009  [DCLG_Test_7_FRPE_Phenolic_HRR2100_M009_0_1]
+  Test:  8 samples
+    - Test_1_PE_PIR HRR1333 M009  [DCLG_Test_1_PE_PIR_HRR1333_M009_0_1]
+    - Test_1_PE_PIR HRR2100 M010  [DCLG_Test_1_PE_PIR_HRR2100_M010_0_1]
+    - Test_3_FRPE_PIR HRR1667 M010  [DCLG_Test_3_FRPE_PIR_HRR1667_M010_0_1]
+    - Test_3_FRPE_PIR HRR2000 M009  [DCLG_Test_3_FRPE_PIR_HRR2000_M009_0_1]
+    - Test_3_FRPE_PIR HRR2100 M010  [DCLG_Test_3_FRPE_PIR_HRR2100_M010_0_1]
+    - Test_5_LCM_PIR HRR2333 M010  [DCLG_Test_5_LCM_PIR_0_1]
+    - Test_5_LCM_PIR HRR2000 M009  [DCLG_Test_5_LCM_PIR_HRR2000_M009_0_1]
+    - Test_5_LCM_PIR HRR2333 M010  [DCLG_Test_5_LCM_PIR_HRR2333_M010_0_1]
+
+  Train: 32 real -> 128 augmented
+  Peak weight=1.0  smooth=0.005  mixup=same-cladding
+
+--- Training 12 candidate members ---
+  Params: 834,515
+  [M 1] valid loss=14.9043  valid R2=0.6188  (276s elapsed)
+  [M 2] valid loss=8.9513  valid R2=0.6949  (714s elapsed)
+  [M 3] valid loss=10.5262  valid R2=0.6559  (1025s elapsed)
+  [M 4] valid loss=11.1094  valid R2=0.6147  (1743s elapsed)
+  [M 5] valid loss=10.2342  valid R2=0.6655  (2122s elapsed)
+  [M 6] valid loss=10.3293  valid R2=0.6656  (2686s elapsed)
+  [M 7] valid loss=10.2707  valid R2=0.6696  (3083s elapsed)
+  [M 8] valid loss=12.3937  valid R2=0.6524  (3433s elapsed)
+  [M 9] valid loss=10.0488  valid R2=0.6750  (3771s elapsed)
+  [M10] valid loss=11.7712  valid R2=0.6281  (4059s elapsed)
+  [M11] valid loss=11.2471  valid R2=0.6101  (4606s elapsed)
+  [M12] valid loss=10.9252  valid R2=0.6261  (5265s elapsed)
+
+--- Greedy ensemble selection (max 5 members, by valid R²) ---
+  + M2  -> valid R2=0.6949
+  + M7  -> valid R2=0.7045
+  Selected: ['M2', 'M7']  weights=['0.534', '0.466']
+  Time: 5265s
+
+  Valid: R2=0.7045  RMSE=114.2C
+    sim 0: R2=0.088
+    sim 1: R2=0.806
+    sim 2: R2=0.728
+    sim 3: R2=0.873
+    sim 4: R2=0.802
+    sim 5: R2=0.628
+    sim 6: R2=0.953
+    sim 7: R2=0.934
+    sim 8: R2=0.921
+
+  Test: R2=0.8622  RMSE=80.0C
+    sim 0: R2=0.538
+    sim 1: R2=0.848
+    sim 2: R2=0.906
+    sim 3: R2=0.956
+    sim 4: R2=0.943
+    sim 5: R2=0.941
+    sim 6: R2=0.869
+    sim 7: R2=0.941
+
+  Saved -> D:\VS_projects\bs8414_KAN_surrogate\models_v2\best_model.pt

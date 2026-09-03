@@ -1,0 +1,27 @@
+{
+ "schema": "bs8414-part1-selected-model/1",
+ "generated_utc": "2026-09-01T18:07:42Z",
+ "kind": "sensor",
+ "selected": "models_part1_r4_seed48",
+ "files": [
+  "part1_member0.pt",
+  "part1_member1.pt",
+  "part1_member2.pt"
+ ],
+ "criterion": "combined valid+test TC R2 (evaluation_part1.json), hash split only",
+ "metrics": {
+  "valid_tc_r2": 0.8408821821212769,
+  "test_tc_r2": 0.8642566204071045,
+  "test_tc_rmse_degC": 52.61764144897461,
+  "test_hrr_r2": 0.9406992793083191
+ },
+ "score": 0.8525694012641907,
+ "n_candidates": 31,
+ "runner_up": "models_part1_kan_noreg_seed48",
+ "runner_up_score": 0.8353148996829987,
+ "margin": 0.017254501581192017,
+ "separated_beyond_noise": false,
+ "noise_band": 0.02,
+ "validation_only_winner": "models_part1_r4_seed48",
+ "validation_agrees": true
+}
