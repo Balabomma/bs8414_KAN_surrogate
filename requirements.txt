@@ -1,6 +1,25 @@
-torch
-numpy
-pandas
-scikit-learn
-matplotlib
-streamlit
+# bs8414_KAN_surrogate — Python dependencies
+#
+# Pinned to the versions this project's own venv actually runs (verified
+# 2026-09-03). Every project here has its OWN venv; they are never shared, and the
+# two model families are deliberately on different torch builds.
+#
+# PyTorch is NOT installed from this file — it needs the CUDA wheel index:
+#
+#   python -m venv venv
+#   .\venv\Scripts\activate
+#   pip install torch==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+#   pip install -r requirements.txt
+#
+# Verify the GPU is actually being used before training:
+#   python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+# Target hardware: NVIDIA RTX 4090 (24 GB); config sets DEVICE = "cuda".
+# Python 3.12.9.
+
+numpy==2.4.4         # arrays throughout
+pandas==3.0.2        # DEVC/HRR CSV parsing and the app tables
+scikit-learn==1.8.0  # scalers and the R2/RMSE metrics
+scipy==1.17.1        # signal and stats helpers
+matplotlib==3.10.8   # every figure and the app plots
+pillow==12.2.0       # figure export
+streamlit==1.56.0    # the Part1 prediction app (app_part1.py)
