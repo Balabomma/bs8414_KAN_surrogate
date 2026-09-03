@@ -45,7 +45,7 @@ from config_part1 import (
     EMBEDDING_DIM, LSTM_HIDDEN_SIZE, ATTENTION_HEADS, DROPOUT, NUM_KNOTS,
     T_AMBIENT, COL_CLADDING, COL_INSULATION, COL_GEOM,
 )
-from model import (KANLinear, TimeEncoding, MultiScaleConv, KANSensorDecoder,
+from layers_part1 import (KANLinear, TimeEncoding, MultiScaleConv, KANSensorDecoder,
                    kan_regularization)
 
 
