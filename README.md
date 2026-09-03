@@ -69,6 +69,19 @@ python model_part1.py     # parameter count + forward-pass check
 
 ### 60-sim — the v1 → v9 lineage
 
+> **The 60-sim lineage code is not in this repository.** `train.py` /
+> `data_loader.py` / `model.py` are tracked (the Part1 model imports `model.py`'s
+> `KANLinear`, `TimeEncoding` and `MultiScaleConv`), but the 32 version files —
+> `model_v3..v7.py`, `train_v2..v9.py`, `train_baseline63.py`,
+> `evaluate_kan.py`, `evaluate_v5..v9.py`, `validate_physics_v6..v9.py`,
+> `killer_excluded_v9.py`, `br135_classification_v9.py`, `bestofn_v9_driver.py`
+> and the `_*.py` helpers — are kept on the research machine and deliberately
+> not published. This repository is the **Part1 geometry-corpus** surrogate. The
+> table below documents the lineage the current recipe came from; the historical
+> results themselves are in `docs/`.
+
+
+
 Each version is a full `model_vN.py` + `train_vN.py` pair, kept rather than
 overwritten, so any number in the record can be reproduced by the code that
 produced it.
